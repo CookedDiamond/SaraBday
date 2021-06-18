@@ -1,37 +1,35 @@
 <html>
-  <p> TEST! </p>
-  
-  <canvas id="blog-post" width="500" height="500">
-  Your browser does not currently support HTML5.<br />
-  Please update your browser to view!
-  </canvas>
-  
-  <script>
-    function rend(){
-      console.log('its doing sth')
-      const canvas = document.getElementById(“blog-post”);
-      const ctx = canvas.getContext(‘2d’);
-    
-      ctx.fillStyle = 'rgb(200, 0, 0)';
-      ctx.fillRect(10, 20, 50, 60);
-    }
-  </script> 
-  
-  <button type="button" onclick="rend()">Square</button>
-  
-  
   <head>
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
-</head>
-<body>
+	<p> TEST! </p>
+  
 
-<h1>A Web Page</h1>
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
-
-</body>
+  
+	<script>
+	var counter = 0;
+	
+		function myFunction() {
+			console.log("its doing sth");
+			  
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+			
+			ctx.beginPath();
+			ctx.fillRect(counter*10, 20, 150, 100);
+			ctx.stroke();		
+			counter = counter + 1;
+		}
+	</script> 
+  </head>
+  
+  <body>
+	<button type="button" onclick="myFunction()">Square</button>
+	
+    <canvas id="canvas" width="500" height="500">
+		Your browser does not currently support HTML5.<br />
+		Please update your browser to view!
+	</canvas>
+  
+	
+  
+  </body>
 </html>
